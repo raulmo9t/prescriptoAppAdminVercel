@@ -18,7 +18,7 @@ const App = () => {
   const { aToken } = useContext(AdminContext);
   const { dToken } = useContext(DoctorContext);
 
-  return aToken || dToken ? (
+  return (
     <div className="bg-[#f8f9fd]">
       <ToastContainer />
       <Navbar />
@@ -38,12 +38,14 @@ const App = () => {
         </Routes>
       </div>
     </div>
-  ) : (
-    <>
-      <Login />
-      <ToastContainer />
-    </>
   );
+  // aToken || dToken ? ( the upper div place
+  // ) : (
+  //   <>
+  //     <Login />
+  //     <ToastContainer />
+  //   </>
+  // );
 };
 
 export default App;
